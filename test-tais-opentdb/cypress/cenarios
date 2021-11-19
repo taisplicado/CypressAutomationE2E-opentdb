@@ -1,0 +1,37 @@
+Funcionalidade: Busca no Banco de Questões
+
+Cenário: Busca por questão inexistente
+Dado que navego para a página de busca do banco de questões
+E digito 'Science: Computers' no campo de busca
+Quando clico no botão buscar
+Então visualizo uma mensagem de erro com o texto 'No questions found.'
+
+----------------------------------------------------------------------
+
+Cenário: Busca por questão existente
+Dado que navego para a página de busca do banco de questões
+E digito 'Science: Computers' no campo de busca
+E seleciono Category
+Quando clico no botão buscar
+Então visualizo se a listagem de questões possui 25 itens 
+E verifico se o controle de paginação aparece
+
+----------------------------------------------------------------------
+
+Funcionalidade: Login
+
+Cenário: Efetuar Login
+Dado que navego para a página de login
+E preencho usuário e senha
+Quando clico no botão entrar
+Então o login é efetuado
+E visualizo o nome do usuário no menu lateral direito
+
+----------------------------------------------------------------------
+
+Cenário: Vizualizar perfil do usuário
+Dado que efetuo login
+Quando clico no menu lateral com nome do usuário
+E clico em visualizar perfil do usuário
+Então a página é direcionada para o perfil do usuário  
+E possui a data que o perfil foi criado 'Thursday, November 18th, 2021'
